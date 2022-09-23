@@ -37,7 +37,7 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <!-- 一定要改一下版本号，不然会报错 -->
-            <version>5.1.8</version>
+            <version>8.0.25</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
