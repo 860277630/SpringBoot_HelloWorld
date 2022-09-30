@@ -20,23 +20,23 @@
 <div style="margin:20px 0;"></div>
 
 <table id="dg" title="My Users" class="easyui-datagrid" style="width:550px;height:250px"
-       url="get_users.php"
+       url="/getData"
        toolbar="#toolbar"
        rownumbers="true" fitColumns="true" singleSelect="true">
     <thead>
     <tr>
-        <th data-options="field:'itemid',width:80">区域id</th>
-        <th data-options="field:'productid',width:100">上级区域id</th>
-        <th data-options="field:'listprice',width:80,align:'right'">区域名称</th>
-        <th data-options="field:'unitcost',width:80,align:'right'">区域编号</th>
+        <th data-options="field:'id',width:80">区域id</th>
+        <th data-options="field:'userName',width:100">上级区域id</th>
+        <th data-options="field:'passWord',width:80,align:'right'">区域名称</th>
+        <th data-options="field:'realName',width:80,align:'right'">区域编号</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-        <td>${user.id }</td>
-        <td>${user.userName }</td>
-        <td>${user.passWord }</td>
-        <td>${user.realName }</td>
+        <td>${id }</td>
+        <td>${userName }</td>
+        <td>${passWord }</td>
+        <td>${realName }</td>
     </tr>
     </tbody>
 </table>

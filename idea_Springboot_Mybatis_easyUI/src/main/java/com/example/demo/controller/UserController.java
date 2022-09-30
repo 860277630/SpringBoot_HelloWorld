@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 /**
  * @Author:wjup
@@ -16,17 +19,21 @@ import com.example.demo.service.UserService;
  */
 
 @Controller
-@RequestMapping("/testBoot")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @RequestMapping("getUser/{id}")
-    public String GetUser(@PathVariable int id,Model model){
-        User user =  userService.Sel(id);
-        model.addAttribute("user", user);
-        System.out.println("xxxxxxxxxxxxxxxxxx"+user.toString());
+
+    @RequestMapping("index")
+    public String index(){
         return "index";
     }
+
+    @RequestMapping("getData")
+    @ResponseBody
+    public List<User> getDatas(){
+        return userService.SelAll();
+    }
+
 }
