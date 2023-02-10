@@ -24,9 +24,9 @@ public class UserController {
 
     @RequestMapping("getUser/{id}")
     public String GetUser(@PathVariable int id,Model model){
-        User user =  userService.Sel(id);
+/*        User user =  userService.Sel(id);
         model.addAttribute("user", user);
-        System.out.println("xxxxxxxxxxxxxxxxxx"+user.toString());
+        System.out.println("xxxxxxxxxxxxxxxxxx"+user.toString());*/
         return "index";
     }
 }
